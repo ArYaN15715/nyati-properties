@@ -148,7 +148,7 @@ export function PropertyModal({
       role="presentation"
     >
       <div
-        className={`relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-card border border-white/10 rounded-2xl shadow-2xl transition-all duration-300 ${
+        className={`relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-card border border-black/10 rounded-2xl shadow-2xl transition-all duration-300 ${
           visible ? "scale-100 opacity-100" : "scale-95 opacity-0"
         }`}
       >
@@ -195,48 +195,48 @@ export function PropertyModal({
             <div className="text-accent font-display font-bold text-2xl sm:text-3xl">
               {property.price}
             </div>
-            <h2 className="text-white font-display font-bold text-xl sm:text-2xl leading-snug">
+            <h2 className="text-black font-display font-bold text-xl sm:text-2xl leading-snug">
               {property.title}
             </h2>
-            <div className="flex items-center gap-2 text-white/80 text-sm font-body">
+            <div className="flex items-center gap-2 text-black/80 text-sm font-body">
               <MapPin size={14} className="text-accent flex-shrink-0" />
               {property.location}
             </div>
           </div>
 
           {/* Description */}
-          <p className="text-white/85 font-body text-sm leading-relaxed">
+          <p className="text-black/85 font-body text-sm leading-relaxed">
             {property.description}
           </p>
 
           {/* Specs */}
           <div className="grid grid-cols-3 gap-3">
             {property.bedrooms !== undefined && property.bedrooms !== null && (
-              <div className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-muted/40 border border-white/5">
+              <div className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-muted/40 border border-black/5">
                 <Bed size={18} className="text-accent" />
-                <span className="text-white font-display font-bold text-lg">
+                <span className="text-black font-display font-bold text-lg">
                   {String(property.bedrooms)}
                 </span>
-                <span className="text-white/80 text-xs font-body">
+                <span className="text-black/80 text-xs font-body">
                   Bedrooms
                 </span>
               </div>
             )}
             {property.bathrooms !== undefined &&
               property.bathrooms !== null && (
-                <div className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-muted/40 border border-white/5">
+                <div className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-muted/40 border border-black/5">
                   <Bath size={18} className="text-accent" />
-                  <span className="text-white font-display font-bold text-lg">
+                  <span className="text-black font-display font-bold text-lg">
                     {String(property.bathrooms)}
                   </span>
-                  <span className="text-white/80 text-xs font-body">
+                  <span className="text-black/80 text-xs font-body">
                     Bathrooms
                   </span>
                 </div>
               )}
-            <div className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-muted/40 border border-white/5">
+            <div className="flex flex-col items-center gap-1.5 p-3 rounded-xl bg-muted/40 border border-black/5">
               <Maximize2 size={18} className="text-accent" />
-              <span className="text-primary-foreground font-display font-bold text-base">
+              <span className="text-black font-display font-bold text-base">
                 {String(property.areaSqft)}
               </span>
               <span className="text-muted-foreground text-xs font-body">
@@ -248,14 +248,14 @@ export function PropertyModal({
           {/* Amenities */}
           {property.amenities.length > 0 && (
             <div>
-              <h4 className="text-white/90 font-display font-semibold text-sm mb-3 uppercase tracking-widest">
+              <h4 className="text-black/90 font-display font-semibold text-sm mb-3 uppercase tracking-widest">
                 Amenities
               </h4>
               <div className="grid grid-cols-2 gap-2">
                 {property.amenities.map((a) => (
                   <div
                     key={a}
-                    className="flex items-center gap-2 text-sm text-white/85 font-body"
+                    className="flex items-center gap-2 text-sm text-black/85 font-body"
                   >
                     <CheckCircle2
                       size={13}
@@ -271,9 +271,9 @@ export function PropertyModal({
           {/* Inquiry Form */}
           <form
             onSubmit={handleSubmit}
-            className="space-y-4 border-t border-white/8 pt-6"
+            className="space-y-4 border-t border-black/10 pt-6"
           >
-            <h4 className="text-white font-display font-semibold text-base">
+            <h4 className="text-black font-display font-semibold text-base">
               Send a Quick Inquiry
             </h4>
 
@@ -281,7 +281,7 @@ export function PropertyModal({
               <div className="space-y-1.5">
                 <Label
                   htmlFor="modal-name"
-                  className="text-white/75 text-xs font-body"
+                  className="text-black/75 text-xs font-body"
                 >
                   Your Name *
                 </Label>
@@ -294,13 +294,13 @@ export function PropertyModal({
                     setForm((f) => ({ ...f, name: e.target.value }))
                   }
                   required
-                  className="bg-white/8 border-white/15 text-white placeholder:text-white/40 focus:border-accent/50 font-body"
+                  className="bg-black/5 border-black/15 text-black placeholder:text-black/40 focus:border-accent/50 font-body"
                 />
               </div>
               <div className="space-y-1.5">
                 <Label
                   htmlFor="modal-phone"
-                  className="text-white/75 text-xs font-body"
+                  className="text-black/75 text-xs font-body"
                 >
                   Phone Number *
                 </Label>
@@ -313,7 +313,7 @@ export function PropertyModal({
                     setForm((f) => ({ ...f, phone: e.target.value }))
                   }
                   required
-                  className="bg-white/8 border-white/15 text-white placeholder:text-white/40 focus:border-accent/50 font-body"
+                  className="bg-black/5 border-black/15 text-black placeholder:text-black/40 focus:border-accent/50 font-body"
                 />
               </div>
             </div>
@@ -333,7 +333,7 @@ export function PropertyModal({
                 onChange={(e) =>
                   setForm((f) => ({ ...f, message: e.target.value }))
                 }
-                className="bg-white/8 border-white/15 text-white placeholder:text-white/40 focus:border-accent/50 font-body resize-none"
+                className="bg-black/5 border-black/15 text-black placeholder:text-black/40 focus:border-accent/50 font-body resize-none"
               />
             </div>
 

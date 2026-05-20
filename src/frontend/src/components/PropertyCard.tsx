@@ -48,7 +48,7 @@ export function PropertyCard({
     <Card
       data-ocid={`properties.item.${index + 1}`}
       onClick={() => onOpenModal(property)}
-      className="group relative flex flex-col overflow-hidden bg-card border border-white/8 rounded-xl cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20 hover:border-accent/30"
+      className="group relative flex flex-col overflow-hidden bg-card border border-black/10 rounded-xl cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20 hover:border-accent/30"
     >
       {/* Image area */}
       <div className="relative h-52 overflow-hidden bg-gradient-to-br from-primary/30 via-secondary to-secondary/80 flex-shrink-0">
@@ -94,7 +94,7 @@ export function PropertyCard({
         </div>
 
         {/* Title */}
-        <h3 className="text-primary-foreground font-display font-semibold text-base leading-snug line-clamp-2">
+        <h3 className="text-black font-display font-semibold text-base leading-snug line-clamp-2">
           {property.title}
         </h3>
 
@@ -105,7 +105,7 @@ export function PropertyCard({
         </div>
 
         {/* Specs row */}
-        <div className="flex items-center gap-4 text-sm text-muted-foreground font-body border-t border-white/8 pt-3">
+        <div className="flex items-center gap-4 text-sm text-muted-foreground font-body border-t border-black/10 pt-3">
           {property.bedrooms !== undefined && property.bedrooms !== null && (
             <span className="flex items-center gap-1">
               <Bed size={13} className="text-accent" />
@@ -130,7 +130,7 @@ export function PropertyCard({
             {visibleAmenities.map((a) => (
               <span
                 key={a}
-                className="px-2 py-0.5 rounded-full text-xs font-body bg-muted/60 text-muted-foreground border border-white/5"
+                className="px-2 py-0.5 rounded-full text-xs font-body bg-muted/60 text-black/70 border border-black/5"
               >
                 {a}
               </span>
