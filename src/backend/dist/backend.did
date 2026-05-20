@@ -1,0 +1,36 @@
+type SubmitInquiryResult = 
+ variant {
+   err: text;
+   ok: InquiryId;
+ };
+type PropertyType = 
+ variant {
+   apartment;
+   commercial;
+   plot;
+   villa;
+ };
+type PropertyId = nat;
+type Property = 
+ record {
+   amenities: vec text;
+   areaSqft: nat;
+   bathrooms: opt nat;
+   bedrooms: opt nat;
+   builderTag: text;
+   description: text;
+   featured: bool;
+   id: PropertyId;
+   location: text;
+   price: text;
+   propertyType: PropertyType;
+   title: text;
+ };
+type InquiryId = nat;
+service : {
+  getFeaturedProperties: () -> (vec Property) query;
+  getProperties: () -> (vec Property) query;
+  getProperty: (id: PropertyId) -> (opt Property) query;
+  submitInquiry: (name: text, phone: text, propertyInterest: text, message:
+   text, propertyId: opt PropertyId) -> (SubmitInquiryResult);
+}

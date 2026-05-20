@@ -1,0 +1,48 @@
+// Version: 1.0.0
+type Id__389469852 = Nat;
+type InquiryId__494871271 = Id__389469852;
+type Inquiry__954613087 =
+  {
+    id : InquiryId__494871271;
+    message : Text;
+    name : Text;
+    phone : Text;
+    propertyId : ?PropertyId__339654052;
+    propertyInterest : Text;
+    timestamp : Timestamp__301639476
+  };
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type PropertyId__339654052 = Id__389469852;
+type PropertyType__673523169 = {#apartment; #commercial; #plot; #villa};
+type Property__612470078 =
+  {
+    amenities : [Text];
+    areaSqft : Nat;
+    bathrooms : ?Nat;
+    bedrooms : ?Nat;
+    builderTag : Text;
+    description : Text;
+    featured : Bool;
+    id : PropertyId__339654052;
+    location : Text;
+    price : Text;
+    propertyType : PropertyType__673523169;
+    title : Text
+  };
+type Timestamp__301639476 = Int;
+actor {
+  stable inquiries :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Inquiry__954613087]];
+      var elementIndex : Nat__490723111
+    };
+  stable properties :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Property__612470078]];
+      var elementIndex : Nat__490723111
+    };
+  stable state : {var nextId : Nat}
+};

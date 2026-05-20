@@ -1,0 +1,30 @@
+{
+  "overview": "Premium high-conversion real estate website for Nyati Property's and Builder — a trusted builder-backed property consultancy in Kota, Rajasthan. Positions the brand as a modern property advisory firm with builder expertise, premium visual design, and multi-channel lead generation via WhatsApp and inquiry forms.",
+  "features": [
+    "Premium sticky navbar with glassmorphism effect",
+    "Hero section with trust indicators and floating property cards",
+    "Featured properties with popup/modal detail view",
+    "Builder Advantage section explaining builder-backed value",
+    "Why Choose Us cards with hover animations",
+    "Local Market Authority section for key Kota areas",
+    "Testimonial slider with auto-scroll and glassmorphism cards",
+    "About section with warm professional tone",
+    "Lead capture forms storing submissions to backend",
+    "Floating WhatsApp button and sticky mobile CTA",
+    "Premium footer with contact info and trust statement",
+    "Mobile-first responsive design with micro-interactions"
+  ],
+  "category": "real-estate",
+  "tags": [
+    "real-estate",
+    "property",
+    "builder",
+    "kota",
+    "rajasthan",
+    "whatsapp-leads",
+    "premium",
+    "luxury",
+    "conversion"
+  ],
+  "last_updated": "2026-05-20T07:59:43.866Z"
+}
